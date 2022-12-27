@@ -13,6 +13,8 @@ function App() {
         "No speech input detected"
     );
 
+    const apiKey = process.env.REACT_APP_GOOGLE_CLOUD_SPEECH_TO_TEXT_API_KEY;
+
     // Start recording speech input and provide feedback
     function startSpeech() {
         // Check if the getUserMedia() method is supported by the browser
@@ -68,11 +70,10 @@ function App() {
                 resolve((reader.result as string).split(",")[1]);
             reader.readAsDataURL(audioBlob);
         })) as string;
-        console.log(base64Data);
 
         // Set up the request to the Google Cloud Speech-to-Text API
         const response = await fetch(
-            "https://speech.googleapis.com/v1/speech:recognize?key=AIzaSyDiAdSMh-9fBB0mO9WxXseqTp31P2lP02w",
+            `https://speech.googleapis.com/v1/speech:recognize?key=${apiKey}`,
             {
                 method: "POST",
                 headers: {

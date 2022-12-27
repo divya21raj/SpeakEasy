@@ -35,7 +35,7 @@ npm install
 4. Set the API key as an environment variable:
 
 ```
-export GOOGLE_CLOUD_SPEECH_TO_TEXT_API_KEY=[API_KEY]
+export REACT_APP_GOOGLE_CLOUD_SPEECH_TO_TEXT_API_KEY=[API_KEY]
 ```
 
 
