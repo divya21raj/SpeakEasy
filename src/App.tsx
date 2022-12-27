@@ -127,7 +127,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Speech Evaluation</h1>
+                <h1>SpeakEasy</h1>
                 <div className="controls">
                     <button onClick={startSpeech} className="start">
                         Start Speech
